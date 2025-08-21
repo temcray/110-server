@@ -1,0 +1,15 @@
+1. Create venv 
+WIN py/python -m venv venv
+
+2.Actiavte the venv
+WIN venv\Scripts\activate
+
+3. WIN pip install Flask
+
+4. Run App
+WIN py\python server.py
+
+Flask:
+string -> string
+int -> int
+3.14 -> float 
