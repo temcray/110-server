@@ -64,5 +64,19 @@ def count():
 def search_title():
   return f"title {search_title}"
 
+@app.get("/api/save")
+def save():
+  return "save"
+
+@app.get("/api/retrieve")
+def retrieve():
+  return "retrieve"
+
+@app.get("/api/search/coupon/codes")
+def search_coupon_codes():
+  return f"search {search_coupon_codes}"
+
+
+
 
 app.run(debug=True)
