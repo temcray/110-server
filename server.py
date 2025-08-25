@@ -1,4 +1,5 @@
-from flask import Flask, jsonify
+from flask import Flask
+
 
 app = Flask(__name__)
 
@@ -45,20 +46,23 @@ def about():
 def get_products():
   print("products")
   products = [
-    {"id": 1,  "name": "Laptop", "price": 1200},
-    {"id": 2,  "name": "Phone", "price": 800},
-    {"id": 3,  "name": "Headphones", "price": 150}
+    {"id": 1,  "name": "Laptop", "price": 1200, "category": "Electronic"},
+    {"id": 2,  "name": "Phone", "price": 800, "category": "Electronic"},
+    {"id": 3,  "name": "Headphones", "price": 150, "category": "Electronic"}
 
     ]
   return products
 
 #Count endpoint
 @app.get("/api/product/count")
-def get_product_count():
-  count = len(products)
-  print("product, count:", count)
-  return jsonify({"count": count})
+def count():
+  print("product, count")
+  return f"product {count}" 
   
+
+@app.get("/api/search/title")
+def search_title():
+  return f"title {search_title}"
 
 
 app.run(debug=True)
