@@ -13,3 +13,13 @@ Flask:
 string -> string
 int -> int
 3.14 -> float 
+
+look up diffents ports
+
+API: application progamming 
+interface
+
+Its GOOD it Status 200 
+                       
+Its BAD if its 400
+
