@@ -146,6 +146,24 @@ def save_porduct():
   products_list.append(data)
   return "New product add",201
 
+
+@app.get("/products/category/<category>")
+def category_lower():
+  category_lower = request.json
+  product.append(category_lower)
+  return "lower, category"
+  
+@app.post("/products/price/<price>")
+def get_product_by_price():
+  return "products, low, price"
+
+
+@app.get("products/search/<title>")
+def get_products_by_search():
+  return "search, title"
+
+
+  
 #list comprehension
 app.run(debug=True)
 #app.run(debug=true, )
